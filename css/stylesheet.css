@@ -1,0 +1,890 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*------------------------------------------------------------------------------------------------------
+-------------MM---------------------------------------------------------------------------MM--------@@--
+-------------MM---------------------------------------------------------------------------MM--------@@--
+-------------MM-----------------------------------------------------------------------MMMMMMMMMM--------
+-----sOOOOs--MM--MM-------MM-----OOOOO-----@@--MM--sOOOOs-----MM-------MM--MM--OOOOs------MM--------MM--
+---sM------suMM--MM-------MM---OM-----Ms---@@--MMns------Ms---MM-------MM--MMpo-----Ms----MM--------MM--
+--Os--------sMM--MM-------MM--sM-------Ms------MM----------O--MM-------MM--MM-------MM----MM--------MM--
+--Os--------sMM--MM-------MM--OMsssssssMs------MM----------O--MM-------MM--MM-------MM----MM--------MM--
+--Os--------sMM--MM-------MM--s----------------MM----------O--MM-------MM--MM-------MM----MM--------MM--
+---sM------snMM--sM-----odMM---Os-----ss---@@--MMus------Ms---sM-----odMM--MM-------MM----sMs----u--MM--
+-----sOOOOs--MM----sOOOO--MM-----OOOOO-----@@--MM--sOOOOs-------sOOOO--MM--MM-------MM-----osQQOdo--MM--
+-----------------------------------------------MM-------------------------------------------------------
+-----------------------------------------------MM-------------------------------------------------------
+-----------------------------------------------MM-------------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: 'Heebo', 'Helvetica Neue', sans-serif;
+}
+p {
+	font-size: 16px;
+	font-weight: 400;
+	color: #151515;
+}
+h1 {
+	font-size: 35px;
+	font-weight: 500; 
+	color: #151515;
+}
+h2 {
+	font-size: 20px;
+	font-weight: 500; 
+	color: #151515;
+}
+h3 {
+	font-size: 40px;
+	font-weight: 700;
+	color: #151515;
+}
+h4 {
+	color: #151515;
+}
+button {outline: none; border:none;}
+
+button:focus {outline: none; border:none;}
+
+.biggest-section h3 {
+	position: relative;
+	z-index: 100; /*!!!index*/
+	margin-bottom: 0rem;
+}
+.small-section h3 { 
+	position: relative;
+	z-index: 100; /*!!!index*/
+	margin-bottom: 0rem;
+}
+.freccina {
+	width:60px;
+	margin:15px;
+}
+.freccina-bianca {
+	fill: #fff;
+}
+.freccina-nera{
+	fill: #151515;
+}
+.cls-1 {
+	fill:none;stroke:#151515;stroke-miterlimit:10;stroke-width:2px;
+}
+.cls-2 {
+	fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;
+}
+
+/*Caratteristiche section e classi colori sfondo*/
+.biggest-section {
+	min-height: 83vh;
+	padding-bottom: 7vh;
+}
+.small-section {
+	min-height:62vh;
+	padding-bottom:7vh;
+}
+@media screen and (min-width:768px) {
+	.biggest-section {min-height: 60vh;}
+	.small-section {min-height: 42vh;}
+}
+@media screen and (min-width:992px) {
+	.biggest-section {min-height: 70vh;}
+}
+.bg-blue {
+	background-color: #005373;
+}
+.bg-red {
+	background-color: #d60000;
+}
+.bg-yellow {
+	background-color: #eebe00;
+}
+.bg-gray {
+	background-color: #edecea;
+}
+
+/*Rettangoloni colorati dietro h3*/
+.bg-shadow-right-red { /*left e right sono identici su smartphone, ma la distinzione left-right serve per le media queries e per noi per sapere a colpo d'occhio, mentre scriviamo, dove andranno a finire da tablet in poi*/
+	background-color: #d60000;
+	box-shadow: 200px 0 0 0 #d60000;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+.bg-shadow-left-red {
+	background-color: #d60000;
+	box-shadow: 200px 0 0 0 #d60000;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+.bg-shadow-right-blue {
+	background-color: #005373;
+	box-shadow: 200px 0 0 0 #005373;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+.bg-shadow-left-blue {
+	background-color: #005373;
+	box-shadow: 200px 0 0 0 #005373;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+.bg-shadow-right-yellow {
+	background-color: #eebe00;
+	box-shadow: 200px 0 0 0 #eebe00;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+.bg-shadow-left-yellow {
+	background-color: #eebe00;
+	box-shadow: 200px 0 0 0 #eebe00;
+	margin-top: 7vh;
+	margin-bottom: 18vh;
+}
+@media screen and (min-width:768px) {
+	.bg-shadow-right-red {box-shadow: 700px 0 0 0 #d60000; margin-bottom: 10vh;}
+	.bg-shadow-left-red {box-shadow: -700px 0 0 0 #d60000; margin-bottom: 10vh;}
+	.bg-shadow-right-blue {box-shadow: 700px 0 0 0 #005373; margin-bottom: 10vh;}
+	.bg-shadow-left-blue {box-shadow: -700px 0 0 0 #005373; margin-bottom: 10vh;}
+	.bg-shadow-right-yellow {box-shadow: 700px 0 0 0 #eebe00; margin-bottom: 10vh;}
+	.bg-shadow-left-yellow {box-shadow: -700px 0 0 0 #eebe00; margin-bottom: 10vh;}
+}
+
+/*Classi per il colore del testo*/
+.white {color: #fff;}
+
+.blue {color: #005373;}
+
+.red {color: #d60000;}
+
+/*Posizionamento delle immagini degli h3*/
+.img-position-right {
+	position: absolute;
+	z-index: 90; /*!!!index*/
+	right: 0;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.img-position-left {
+	position: absolute;
+	z-index: 90; /*!!!index*/
+	right: 0;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.img-max-height {
+	max-height: 33vh;
+	width: auto;
+}
+@media screen and (min-width:768px) {		
+	.img-max-height {max-height: 40vh;}
+	.img-position-left {left:0;}
+}
+@media screen and (min-height:800px) {
+	.img-max-height {max-height: 33vh;}  
+}
+@media screen and (min-width:992px) {		
+	.img-max-height {max-height: 50vh;}
+}
+
+/*MENU*/
+.sopratutto {z-index: 1001;} /*!!!index*/
+
+#hamburger-icon {
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+#hamburger-icon .line {
+  width: 40px;
+  height: 8px;
+  right: 0px;/*sennò quando si chiude il menù l'animazione riparte da sinistra*/
+  background-color: #151515;
+  border-radius: 15px;
+  position: absolute;
+  transition-duration: 0.4s;
+ }
+#hamburger-icon .line.line-1 {
+    top: 0px;
+}
+#hamburger-icon .line.line-2 {
+    bottom: 0px;
+}
+#hamburger-icon.active .line-1 {
+    width: 8px;
+    height: 8px;
+    right: 0px;
+}
+#hamburger-icon.active .line-2 {
+    width: 8px;
+    height: 8px;
+    right: 0px;
+}
+html.noScroll, body.noScroll {
+    max-height: 100%;
+    overflow: hidden;
+}
+.our-sidenav {
+	background-color: rgba(255, 255, 255, 1);
+	z-index: 999; /*!!!index*/
+	right: -100vw;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	opacity: 0;
+	overflow: hidden;
+	transition: all 0.8s;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 50px;
+}
+.our-sidenav.shown {
+	right: 0;
+	opacity: 1;
+}
+.fullheight-ul{
+	height: 100vh;
+}
+.navbar-light .navbar-nav .nav-item .nav-link {font-size: 18px; color: #151515; transition: all 300ms;} /*colore testo menu desktop*/
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover {transform: translateX(2px);}
+
+.our-sidenav .navbar-nav .nav-item .nav-link {color: #151515;} /*colore testo menu sidenav*/
+
+.navbar-brand img {width: 165px;}
+
+/*due:punti che compaiono*/
+.red-duepunti-appear {
+	transition: all 300ms;
+}
+.red-duepunti-appear:before {
+	content: ": ";
+	font-weight: 700;
+	color: rgba(255,255,255,0.0);
+	transition: all 300ms;
+}
+.red-duepunti-appear:hover:before {
+	color: #d60000;
+}
+.blue-duepunti-appear {
+	transition: all 300ms;
+}
+.blue-duepunti-appear:before {
+	content: ": ";
+	font-weight: 700;
+	color: rgba(255,255,255,0.0);
+	transition: all 300ms;
+}
+.blue-duepunti-appear:hover:before {
+	color: #005373;
+}
+
+/* Icon forward freccine */   
+.hvr-icon-forward {
+  display: inline-block;
+}
+.hvr-icon-forward .hvr-icon {
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover .hvr-icon {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/*FOOTER*/
+footer p {
+	color: #fff;
+}
+footer h3 {
+	top: -30px;
+}
+footer h4 {color: #eebe00;}
+
+.yellow-border-bottom {
+	border: none;
+	border-bottom: 4px solid #eebe00;
+	margin-bottom: 1rem;
+}
+#h3-background-footer {
+	background-color: #d60000;
+	height: 20px;
+}
+footer a {
+	color: #fff;
+	text-decoration: none;
+	transition: all 200ms;
+}
+footer a:hover {
+	color: #eebe00;
+	text-decoration: none;
+}
+.info-footer {
+	font-weight: 300;
+	font-size: 14px;
+	color: #fff;
+}
+.img-social {
+	width: 70px;
+	display: inline-block;
+}
+#copyright-border {
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+@media screen and (max-width:576px) {
+	#copyright-border {border: none;}
+    .info-footer {padding: 8px 0;}
+}
+
+/**** HOME ****/
+/*tablet mockup*/
+#tablet-mockup {
+	margin-right: 15px;
+	width: 170px;
+}
+@media screen and (min-width:768px) {
+	#tablet-mockup{
+		width: 300px;
+		margin-right: 50px;
+	}
+}
+@media screen and (min-width:992px) {
+
+	#tablet-mockup{
+		width: 300px;
+		margin-right: 20vw;
+	}
+}
+/*scritta autori*/
+#autori-home{
+	/*width:255px;*/
+	top: 13%;
+	left: 35%;
+}
+#scritta{
+	height: 200px;
+}
+@media screen and (min-width:768px) {		
+	#autori-home{
+		top: 13%;
+		left: 0;
+		right: 40%;
+	}
+	#scritta{
+		margin-left: -40%;
+	}	
+}
+@media screen and (min-width:992px) {
+	#autori-home{
+		top: 13%;
+		left: 0;
+		right: -10%;
+	}
+	#scritta{
+		margin-left: -10%;
+	}	
+}
+@media screen and (min-width:1200px) {
+	#autori-home{
+		top: 13%;
+		left: 0;
+		right: 0;
+	}
+	#scritta{
+		margin-left: 0;
+	}	
+}
+#header-home {
+	background-image: url("../img/HomePage-header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 44% center;
+}
+#cta-webmarketing{
+	background-image: url("../img/hashtag.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#cta-visualdesign{
+	background-image: url("../img/aa.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#cta-webmarketing a:hover{
+	text-decoration: none;
+}
+#cta-visualdesign a:hover{
+	text-decoration: none;
+}
+#cta-webmarketing p{
+	font-size: 20px;
+}
+#cta-visualdesign p{
+	font-size: 20px;
+}
+
+/**** CHI SIAMO ****/
+.h3-chi-siamo{
+	position: relative;
+	bottom: 125px;
+}
+.fascia{
+	height:230px;
+	position:absolute;
+}
+.link-in{
+	width: 50px;
+	margin-top: 50px;
+}
+.testo-img{
+margin-top:-50px;
+}
+#contatti-chi-siamo{
+	margin-right: -300px;
+	margin-top: 100px;
+}
+#lavora-chi-siamo{
+margin-top: 50px;
+margin-right: -170px;
+}
+@media screen and (min-width:375px) {
+	#contatti-chi-siamo{
+		margin-right: -500px;
+		margin-top: 80px;
+	}
+	#lavora-chi-siamo{
+		margin-right: -250px;
+		}
+}
+@media screen and (min-width:768px) {
+	.h3-chi-siamo {
+		bottom:50px;	
+	}
+	.testo-img{
+		margin-top:0px;
+	}
+	#header-chi-siamo{
+		background-image: url("../img/chi-siamo-header.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 35% center;	
+	}
+	#contatti-chi-siamo{
+		margin-left: 300px;
+		margin-top: 65px;
+		margin-right:0;
+	}
+	#lavora-chi-siamo{
+		margin-top: 50px;
+		margin-right: 0;
+		margin-left: -200px;
+		}
+}
+@media screen and (min-width:992px) {
+	.h3-chi-siamo {
+		bottom:125px;	
+	}
+	.testo-img{
+		margin-top:-50px;
+	}
+	#contatti-chi-siamo{
+		margin-left: 900px;
+		margin-top: 65px;
+		margin-right:0;
+	}
+}
+@media screen and (min-width:1400px) {
+	#lavora-chi-siamo{
+		margin-top: 50px;
+		margin-right: 0;
+		margin-left: 200px;
+		}
+}
+#header-chi-siamo{
+	background-image: url("../img/chi-siamo-header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 47% center;	
+}
+
+/**** PER GLI AUTORI ****/
+#header-per-gli-autori {
+	background-image: url("../img/header-per-gli-autori.jpg");
+	background-size: cover;
+	background-position: 80% center;
+	background-repeat: no-repeat;
+}
+#poet-for-hire {margin-right: 20px;}
+
+#video-annamaria-testa {
+	background-color: #151515;
+	-webkit-box-shadow: 10px 10px 0px 0px #d60000;
+	-moz-box-shadow: 10px 10px 0px 0px #d60000;
+	box-shadow: 10px 10px 0px 0px #d60000;
+	max-width: 80vw;
+	z-index: 110;
+	width: 320px;
+	height: 240px;
+}
+#punto-me {max-width: 50%;}
+
+@media screen and (min-width:578px) {
+	#poet-for-hire {margin-right: 50px;}
+	#punto-me {max-width: 60%;}
+	#contenitore-punto-me {overflow: visible;}
+}
+@media screen and (min-width:768px) {
+	#video-annamaria-testa {
+		position: absolute;
+		top:-150px;
+		right:0;
+	}
+}
+@media screen and (min-width:992px) {
+	#poet-for-hire {margin-right: 20vw;}
+	#punto-me {max-width: 40%;}
+}
+
+/**** LAVORA CON NOI ****/
+#header-lavora-con-noi {
+	background: url("../img/header-lavoraconnoi.jpg") no-repeat 25% center;
+	background-size: cover;
+}
+#sketch {max-height: 30vh; margin-right: -150px;}
+
+#mkting-scritta {margin-right: -350px;}
+
+#container-helloworld {width: 90%;}
+
+#container-helloworld p {
+	color: #edecea;
+	font-size: 2.5rem;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 3px solid #eebe00;
+	margin: 0 0 0 auto;
+	animation:
+		typing 4s steps(24, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #eebe00; }
+}
+@media screen and (min-width: 768px) {
+	
+	#sketch {max-height: 380px; margin-right: -150px;}
+	
+	#mkting-scritta {margin-left: 30px; margin-top: 150px; max-width: 40%;}
+	
+	#container-helloworld {
+		width: 75%;
+		position: absolute;
+		z-index: 90;
+		right: 20px;
+		top: 100px;
+	}
+	#container-helloworld p {border-right: 3px solid #fff; font-size: 3.5rem;}
+}
+@media screen and (min-width:992px) {
+	#container-helloworld {
+		position: absolute;
+		z-index: 90;
+		right: 50px;
+	}
+	#container-helloworld p {border-right: 3px solid #fff;}
+}
+@media screen and (min-width:1400px) {
+	#sketch {max-height: 380px; margin-right: 10vw;}
+}
+
+/**** PRIVACY POLICY *****/
+#header-privacy-policy {
+	background: #edecea url("../img/header-privacy-policy.jpg") no-repeat center center;
+}
+
+/**** WEBandMARKETING *****/
+.bg-shadow-right-cta {	
+	background-color: #005373;
+	top:-7vh;
+}
+#header-web-marketing {
+	background-image: url("../img/web-marketing-header.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40% center;
+}
+#web-design-servizi {
+	max-width: 330px;
+	padding-top:85px;
+	margin-right:-135px;
+	}
+#social-media-pattern{
+	margin-right:-170px;
+	max-width: 400px;
+}
+#marketing-ads{
+	margin-top: 110px;
+	margin-right: -800px;
+}
+@media screen and (min-width:578px) {
+	#web-design-servizi {
+	margin-right: 40px;
+	padding-top:50px;
+}
+	#social-media-pattern{
+		margin-right:-10vw;
+		max-width: 60vw;
+	}
+}
+@media screen and (min-width:768px) {
+	#web-design-servizi {
+		max-width:45vw;
+		margin-right:50px;
+	}
+	#marketing-ads{
+		margin-left: -700px;
+	}
+}
+@media screen and (min-width:992px) {
+	#web-design-servizi {
+		margin-right:50px;
+	}
+	#header-web-marketing {
+		background-position: center center
+	}
+}
+@media screen and (min-width:1200px) {
+	#social-media-pattern{
+		max-width:40vw;
+		margin-right:10vw;
+	}
+}
+@media screen and (min-width:1400px) {
+	#marketing-ads {
+		margin-left:-300px;
+	}
+}
+
+/**** VISUAL DESIGN ****/ 
+#brand-design {
+	margin-top:100px;
+}
+#graphic-design-servizi {
+	height: 40vh;
+	margin-right: -5vw;
+}
+@media screen and (min-width:768px) {
+	#brand-design {
+		margin-top:12vh;
+		margin-left:-500px;
+	}
+	#graphic-design-servizi {
+		height: 45vh;
+		margin-right: 15vw;
+	}
+}
+@media screen and (min-width:1140px) {
+	#brand-design {	
+		margin-left:-300px;
+	}
+}
+@media screen and (min-width:1400px) {
+	#brand-design {
+		margin-left:-170px;
+	}
+}
+#header-visual-design {
+	background-image: url("../img/visual-design-header.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 40% center;
+}
+@media screen and (min-width:992px) {
+	#header-visual-design {
+		background-position: center center;
+	}
+	#graphic-design-servizi {
+		height: 42vh;
+		margin-right: 20vw;
+	}
+}
+
+/**** PORTFOLIO ****/
+#header-portfolio {
+	background-image: url("../img/header-portfolio.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 45% top;
+}
+/*effetto hover link pagina portfolio*/
+.hover-red-link:hover {
+	transform: translateX(2px);
+	color: #d60000;
+	text-decoration: none;
+	border-bottom: 1px solid #d60000;
+}
+.hover-blue-link:hover {
+	transform: translateX(2px);
+	color: #005373;
+	text-decoration: none;
+	border-bottom: 1px solid #005373;
+}
+/*immagini h3 section portfolio*/
+#scritta-muriel {
+	margin-left: 87%;
+}
+#logo-cortina {
+	margin-left: 8%;
+}
+#volantino-zerocalcare {
+	margin-left: 20%;
+	margin-top: 5%;
+}
+@media screen and (min-width:768px) {
+	#scritta-muriel {
+		margin-left: 72%;
+		margin-top: 2%;
+		max-height: 25vh;
+	}
+	#volantino-zerocalcare{
+		margin-left: 0%;
+		margin-right: 50px;
+	}
+}
+@media screen and (min-width:992px) {
+	#volantino-zerocalcare{
+		max-height: 33vh;		
+	}
+}
+@media screen and (min-width:1200px) {
+	#scritta-muriel {
+		margin-left: 45%;
+		margin-top: 5%;
+	}
+	#logo-cortina {
+	margin-left: 15%;
+	}
+	#volantino-zerocalcare{
+		margin-top: 2%;
+		max-height: 40vh;
+		margin-right: 300px;
+	}
+}
+.link-portfolio { /*necessario altrimenti i link potrebbero rimanere sotto la classe .img-position-left/right e non essere ben cliccabili */
+	position: relative;
+	z-index: 91;
+}
+/* icona totop portfolio*/
+.totop  {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	z-index: 4000;
+    bottom: 10px;
+    right: 8px;
+    cursor: pointer;
+	display: none;
+}
+@media screen and (min-width:768px) {
+	.totop {
+		bottom: 20px;
+    	right: 10px;	
+	}
+}
+#icona-totop {
+	height: 40px;
+	width: auto;
+}
+@media screen and (min-width:768px) {
+	#icona-totop {
+		height: 50px;
+	}
+}
+
+/****CONTATTI****/
+#header-contatti {
+	background-image: url("../img/header-contatti.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 35% top;
+}
+.cta{
+	height: 120px;
+	color: #151515;
+	position: relative;
+}
+@media screen and (min-width:320px) {
+	.cta{
+		height: 100px;
+	}
+}
+@media screen and (min-width:992px) {
+	.cta{
+		height: 155px;
+	}
+}
+.cta a {
+	position: absolute;
+	bottom: 0;
+	text-decoration: none;
+}
+.cta p {
+	font-weight: 500;
+	font-size: 18px;
+}
+#cta-email {
+	background-image:url("../img/email_icon.png");
+	background-repeat: no-repeat;
+	background-size: auto 80%;
+	background-position: 35% bottom;
+}
+#cta-telefono {
+	background-image:url("../img/phone_icon.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 16px bottom;
+}
+#maps-cell {
+	max-height: 40vh;
+}
+#maps-tablet {
+	margin-right: 10%;
+}
+#maps-pc {
+	max-height: 25vh;
+	margin-left: -10%;
+	margin-top: 15%;
+}
+@media screen and (min-width:1200px) {
+	#maps-pc{
+		max-height: 33vh;
+		margin-right: 20%;
+		margin-top: 10%;
+	}
+}
+#freccina-maps {
+	width: 35px;
+	margin-left: 5px;
+}
+.freccina-rossa {
+	fill: #d60000;
+}
+.cls-3 {
+	fill:none;stroke:#d60000;stroke-miterlimit:10;stroke-width:2px;
+}
